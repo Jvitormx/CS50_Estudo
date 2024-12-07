@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>index</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section>
+            <form>
+                <input type="text" id="a">
+                <input type="button" value="enviar" onclick="add(this.form.a.value)">
+            </form>
+        </section>
+
+        <section id="b"></section>
+
+        <a ></a>
+
+        <script>
+            function add(titulo)
+            {
+                localStorage.setItem("titulo", titulo);
+            }
+
+            let novo=localStorage.getItem("titulo");
+
+            let opa=document.getElementById("b");
+            opa.innerHTML=`
+            <br><p>${novo}</p>`
+        </script>
+    </body>
+</html>
